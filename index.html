@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pengelolaan Data Buku</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+  <script src="js/main.js"></script>
+</head>
+<body>  
+  <header>
+    <div class="container">
+      <h1>Pengelolaan Data Buku</h1>
+      <h2>Menggunakan DOM dan Web Storage</h2>
+    </div>
+  </header>
+  <main>
+    <section id="buku">
+      <button id="books-form-toggle">Tambah Buku</button>
+      <section class="table-container">
+        <table id="book-list">
+          <thead>
+            <tr>
+              <th>Nama Buku</th>
+              <th>Nama Penerbit atau Penulis</th>
+              <th>Tahun Terbit</th>
+              <th>Rak</th>
+              <th class="action"></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section class="form-container">
+        <form id="book-form">
+          <h3>Tambah Buku Baru</h3>
+          <div class="alert"></div>
+          <div class="sheet">
+            <div class="field">
+              <label for="title">Nama Buku</label>
+              <input type="text" name="title" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="author">Nama Penerbit atau Penulis</label>
+              <input type="text" name="author" autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="year">Tahun Terbit</label>
+              <input type="number" min="1900" max="2024" name="year" autocomplete="off">
+            </div>
+            <div class="field">
+              <label class="checkbox" for="isCompleted">Sudah dibaca</label>
+              <input type="checkbox" name="isCompleted">
+            </div>
+          </div>
+          <div class="action">
+            <button type="submit">Simpan</button>
+            <button id="books-form-cancel">Batal</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Irvan Hilmi. All rights reserved.</p>
+  </footer>
+</body>
+</html>
